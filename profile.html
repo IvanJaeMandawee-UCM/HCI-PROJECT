@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ivan Jae D. Mandawe | Personal Profile</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Syne:wght@600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="bar"></div>
+
+<nav>
+  <b>IJM</b>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#journey">Journey</a></li>
+    <li><a href="#projects">Achievements</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<header class="hero">
+  <canvas id="px" aria-hidden="true"></canvas>
+  <div class="wrap">
+    <h1 class="in">Ivan Jae<span>D. Mandawe</span></h1>
+    <div class="role in"><span id="typed"></span><i class="cur"></i></div>
+    <p class="lead in">Student at the University of Cebu (Main), living in Kalunasan, Cebu City, and proudly from Calubian, Bogo City, Cebu.</p>
+    <div class="btns in">
+      <a class="btn solid" href="#projects">See my achievements</a>
+      <a class="btn" href="#contact">Contact me</a>
+    </div>
+  </div>
+</header>
+
+<section class="about" id="about">
+  <div class="wrap">
+    <h2>About me</h2>
+    <div class="band">
+      <div class="b1" aria-hidden="true"></div>
+      <div class="b2" aria-hidden="true"></div>
+      <div class="b3"><div class="txt">
+        <p>I am Ivan Jae D. Mandawe, a student at the University of Cebu (Main). I currently live in Kalunasan, Cebu City, and my home is in Calubian, Bogo City, Cebu.</p>
+        <p>Outside class, I enjoy programming and playing games like Fallout and State of Decay 2.</p>
+      </div></div>
+    </div>
+    <div class="facts">
+  <div><small>Status</small><strong>Student</strong></div>
+  <div><small>University</small><strong>University of Cebu (Main)</strong></div>
+  <div><small>Current address</small><strong>Kalunasan, Cebu City</strong></div>
+  <div><small>Main address</small><strong>Calubian, Bogo City, Cebu</strong></div>
+  <div><small>Gender</small><strong>Male</strong></div>
+  <div><small>Height</small><strong>5.5 ft (about 168 cm)</strong></div>
+  <div><small>Hobbies</small><strong>Programming, playing games</strong></div>
+  <div><small>Favorite games</small><strong>Fallout, State of Decay 2</strong></div>
+</div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <h2>Skills</h2>
+    <div class="skill"><div class="top"><span>Gaming</span><span>90%</span></div><div class="track"><div class="fill" data-w="90"></div></div></div>
+    <div class="skill"><div class="top"><span>Problem solving</span><span>80%</span></div><div class="track"><div class="fill" data-w="80"></div></div></div>
+    <div class="skill"><div class="top"><span>Programming</span><span>65%</span></div><div class="track"><div class="fill" data-w="65"></div></div></div>
+    <div class="skill"><div class="top"><span>Teamwork</span><span>85%</span></div><div class="track"><div class="fill" data-w="85"></div></div></div>
+    <div class="tags"><span>Fallout</span><span>State of Decay 2</span><span>Programming</span></div>
+  </div>
+</section>
+
+<section class="exp" id="journey">
+  <div class="wrap">
+    <h2>My journey</h2>
+    <div class="line">
+      <div class="item"><time>2025 to now</time><h3>University of Cebu (Main)</h3><p>This University is the last hope of my journey through my dreams.</p></div>
+      <div class="item"><time>2022 to 2024</time><h3>Cebu Roosevelt Memorial Colleges (CRMC)</h3><p>This school enlightened me towards the brightest, even back then I felt hellish days there.</p></div>
+      <div class="item"><time>2021</time><h3>My 2021 milestone</h3><p>It gave me strength to continue in the climax of the crisis when COVID ended. I gave all my knowledge in this year, and I will make it perfect even if it is hard.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <h2>Achievements</h2>
+    <div class="projects">
+      <article class="card big"><h3>Worth Achievements</h3><p>I've been awarded in SHS Grade 12 as "Best Research Presenter". Those hellish days have paid off through hard work.</p></article>
+      <article class="card"><h3>I made it here</h3><p>I made it here in the University of Cebu (Main), and I am very thankful that it gave me the chance to be on this path.</p></article>
+      <article class="card"><h3>Starting up</h3><p>I've already made up my mind that I will choose Bachelor of Science in Information Technology (BSIT).</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <h2>Let's connect</h2>
+    <a class="big" href="mailto:ivanjaemandawe@gmail.com">ivanjaemandawe@gmail.com</a>
+    <div class="links">
+      <a href="https://github.com/IvanJaeMandawee-UCM" target="_blank" rel="noopener">GitHub</a><a href="tel:+639916527520">+63 991 652 7520</a>
+    </div>
+  </div>
+</section>
+
+<footer>© 2026 Ivan Jae D. Mandawe</footer>
+
+<button id="tour" type="button">Play auto tour</button>
+
+<script>
+// typing effect for the role line (edit the list)
+const roles=["Student","Programmer","Gamer"];
+const typed=document.getElementById('typed');
+let r=0,c=0,del=false;
+(function type(){
+  const w=roles[r];
+  typed.textContent=w.slice(0,c);
+  if(!del&&c<w.length){c++;setTimeout(type,90)}
+  else if(!del){del=true;setTimeout(type,1200)}
+  else if(c>0){c--;setTimeout(type,45)}
+  else{del=false;r=(r+1)%roles.length;setTimeout(type,300)}
+})();
+
+// scroll progress bar
+const bar=document.getElementById('bar');
+addEventListener('scroll',()=>{
+  const h=document.documentElement.scrollHeight-innerHeight;
+  bar.style.width=(scrollY/h*100)+'%';
+},{passive:true});
+
+// skill bars fill when scrolled into view
+const io=new IntersectionObserver(es=>es.forEach(e=>{
+  if(e.isIntersecting){e.target.style.width=e.target.dataset.w+'%';io.unobserve(e.target)}
+}),{threshold:.4});
+document.querySelectorAll('.fill').forEach(f=>io.observe(f));
+
+// optional auto tour: smooth scroll top to bottom in about 45 seconds
+const btn=document.getElementById('tour');
+let raf=null,start,from,dist;
+const DURATION=45000;
+function stop(){cancelAnimationFrame(raf);raf=null;btn.textContent='Play auto tour'}
+function step(t){
+  if(!start)start=t;
+  const p=Math.min((t-start)/DURATION,1);
+  scrollTo(0,from+dist*p);
+  if(p<1&&raf)raf=requestAnimationFrame(step);else stop();
+}
+btn.addEventListener('click',()=>{
+  if(raf){stop();return}
+  document.documentElement.style.scrollBehavior='auto';
+  from=scrollY;dist=document.documentElement.scrollHeight-innerHeight-from;start=null;
+  btn.textContent='Pause tour';
+  raf=requestAnimationFrame(step);
+});
+['wheel','touchstart','keydown'].forEach(ev=>addEventListener(ev,()=>{if(raf)stop()},{passive:true}));
+
+// pixelated matte-yellow background that reacts to the cursor
+(function(){
+  const hero=document.querySelector('.hero'),cv=document.getElementById('px'),ctx=cv.getContext('2d');
+  const S=16,still=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let W,H,cols,rows,heat,mx=-999,my=-999,px=-999,py=-999,live=true;
+  function size(){
+    const r=hero.getBoundingClientRect();W=cv.width=r.width;H=cv.height=r.height;
+    cols=Math.ceil(W/S);rows=Math.ceil(H/S);heat=new Float32Array(cols*rows);
+  }
+  function inject(x,y,k){
+    const cx=x/S,cy=y/S,R=6;
+    for(let j=Math.max(0,Math.floor(cy-R));j<Math.min(rows,cy+R);j++)
+      for(let i=Math.max(0,Math.floor(cx-R));i<Math.min(cols,cx+R);i++){
+        const d=Math.hypot(i+.5-cx,j+.5-cy);
+        if(d<R)heat[j*cols+i]=Math.min(1,heat[j*cols+i]+k*(1-d/R));
+      }
+  }
+  hero.addEventListener('pointermove',e=>{
+    if(still)return;
+    const r=hero.getBoundingClientRect();mx=e.clientX-r.left;my=e.clientY-r.top;
+    const sp=Math.min(1,Math.hypot(mx-px,my-py)/40);
+    if(px>-900){ // fill the gap between events so the trail is continuous
+      const n=Math.ceil(Math.hypot(mx-px,my-py)/S)||1;
+      for(let k=1;k<=n;k++)inject(px+(mx-px)*k/n,py+(my-py)*k/n,.12+.18*sp);
+    }
+    px=mx;py=my;
+  },{passive:true});
+  hero.addEventListener('pointerleave',()=>{px=py=-999});
+  new IntersectionObserver(es=>{live=es[0].isIntersecting;if(live&&!still)requestAnimationFrame(draw)}).observe(hero);
+  addEventListener('resize',size);
+
+  function draw(t){
+    if(!live)return;
+    ctx.clearRect(0,0,W,H);
+    for(let j=0;j<rows;j++)for(let i=0;i<cols;i++){
+      const x=i*S+S/2,y=j*S+S/2;let a=0;
+      for(let b=0;b<3;b++){ // slow drifting blobs
+        const bx=W*(.5+.38*Math.sin(t*.00018+b*2.1)),by=H*(.5+.3*Math.cos(t*.00023+b*1.7)),
+              d2=((x-bx)**2+(y-by)**2),sg=Math.min(W,H)*.28;
+        a+=.2*Math.exp(-d2/(2*sg*sg));
+      }
+      const idx=j*cols+i;
+      a+=heat[idx]*.55+Math.sin(i*12.9+j*78.2+t*.0016)*.025;
+      a=Math.round(Math.max(0,Math.min(.5,a))*10)/10;
+      if(a>0.04){ctx.fillStyle='rgba(214,170,40,'+a+')';ctx.fillRect(i*S,j*S,S-1,S-1)}
+      heat[idx]*=.955;
+    }
+    if(!still)requestAnimationFrame(draw);
+  }
+  size();
+  requestAnimationFrame(draw);
+})();
+
+// About bands slide from the right to the center as you scroll down
+(function(){
+  const band=document.querySelector('.band');
+  if(!band||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  let tick=false;
+  function update(){
+    tick=false;
+    const top=band.getBoundingClientRect().top,vh=innerHeight;
+    let p=(vh*.95-top)/(vh*.6);p=Math.max(0,Math.min(1,p));
+    p=p*p*(3-2*p);
+    band.style.setProperty('--tx',((1-p)*75).toFixed(2)+'%');
+  }
+  addEventListener('scroll',()=>{if(!tick){tick=true;requestAnimationFrame(update)}},{passive:true});
+  addEventListener('resize',update);
+  update();
+})();
+</script>
+</body>
+</html>
