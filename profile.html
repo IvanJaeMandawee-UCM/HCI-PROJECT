@@ -15,26 +15,66 @@
 <nav>
   <b>IJM</b>
   <ul>
+    <li><a href="#gallery">Photos</a></li>
     <li><a href="#about">About</a></li>
     <li><a href="#skills">Skills</a></li>
     <li><a href="#journey">Journey</a></li>
     <li><a href="#projects">Achievements</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
+  <button class="burger" type="button" aria-label="Menu" aria-expanded="false">&#9776;</button>
 </nav>
 
 <header class="hero">
   <canvas id="px" aria-hidden="true"></canvas>
   <div class="wrap">
+   <div class="hero-text">
     <h1 class="in">Ivan Jae<span>D. Mandawe</span></h1>
     <div class="role in"><span id="typed"></span><i class="cur"></i></div>
     <p class="lead in">Student at the University of Cebu (Main), living in Kalunasan, Cebu City, and proudly from Calubian, Bogo City, Cebu.</p>
     <div class="btns in">
-      <a class="btn solid" href="#projects">See my achievements</a>
+      <a class="btn solid" href="#gallery">My photos</a>
+      <a class="btn" href="#projects">Achievements</a>
       <a class="btn" href="#contact">Contact me</a>
     </div>
+   </div>
+   <div class="portrait in"><img src="images/portrait.jpg" alt="Ivan Jae D. Mandawe"><span>BSIT</span></div>
   </div>
+  <a class="cue" href="#gallery" aria-label="Scroll down">Scroll<i></i></a>
 </header>
+
+<div class="marquee" aria-hidden="true"><div class="track"><span>Student</span><span>BSIT</span><span>Programmer</span><span>Gamer</span><span>Cebu City</span><span>University of Cebu</span><span>Student</span><span>BSIT</span><span>Programmer</span><span>Gamer</span><span>Cebu City</span><span>University of Cebu</span></div><div class="track"><span>Student</span><span>BSIT</span><span>Programmer</span><span>Gamer</span><span>Cebu City</span><span>University of Cebu</span><span>Student</span><span>BSIT</span><span>Programmer</span><span>Gamer</span><span>Cebu City</span><span>University of Cebu</span></div></div>
+
+<section class="gallery" id="gallery">
+  <div class="wrap">
+    <h2>My story in photos</h2>
+    <p class="gal-sub">Pick a chapter of my life and tap any photo to see it bigger.</p>
+    <div class="filters" role="group" aria-label="Photo categories">
+      <button type="button" data-f="all" class="on"><span>All<em>7</em></span></button>
+      <button type="button" data-f="elementary"><span>Elementary<em>1</em></span></button>
+      <button type="button" data-f="high"><span>High School<em>2</em></span></button>
+      <button type="button" data-f="senior"><span>Senior High<em>1</em></span></button>
+      <button type="button" data-f="college"><span>College<em>1</em></span></button>
+      <button type="button" data-f="family"><span>Family &amp; Cousins<em>2</em></span></button>
+    </div>
+    <div class="wall">
+      <button class="shot" type="button" data-cat="college"><span class="ph"><img src="images/college.jpg" alt="College" loading="lazy"></span><span class="cap"><b>College</b><i>College</i></span></button>
+      <button class="shot" type="button" data-cat="elementary"><span class="ph"><img src="images/elementary.jpg" alt="Elementary" loading="lazy"></span><span class="cap"><b>Elementary</b><i>Elementary</i></span></button>
+      <button class="shot" type="button" data-cat="high"><span class="ph"><img src="images/high-school-era.jpg" alt="High School Era" loading="lazy"></span><span class="cap"><b>High School Era</b><i>High School</i></span></button>
+      <button class="shot" type="button" data-cat="high"><span class="ph"><img src="images/high-school.jpg" alt="High School" loading="lazy"></span><span class="cap"><b>High School</b><i>High School</i></span></button>
+      <button class="shot" type="button" data-cat="senior"><span class="ph"><img src="images/senior-high.jpg" alt="When I was Senior High School Student" loading="lazy"></span><span class="cap"><b>When I was Senior High School Student</b><i>Senior High</i></span></button>
+      <button class="shot" type="button" data-cat="family"><span class="ph"><img src="images/family-christmas.jpg" alt="Family Christmas Celebration" loading="lazy"></span><span class="cap"><b>Family Christmas Celebration</b><i>Family &amp; Cousins</i></span></button>
+      <button class="shot" type="button" data-cat="family"><span class="ph"><img src="images/pandemic-cousins.jpg" alt="Pandemic day with my cousins" loading="lazy"></span><span class="cap"><b>Pandemic day with my cousins</b><i>Family &amp; Cousins</i></span></button>
+    </div>
+  </div>
+</section>
+
+<div id="lb" role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <button class="x" type="button" aria-label="Close">&times;</button>
+  <button class="pv" type="button" aria-label="Previous">&#8249;</button>
+  <button class="nx" type="button" aria-label="Next">&#8250;</button>
+  <figure><img alt=""><figcaption></figcaption></figure>
+</div>
 
 <section class="about" id="about">
   <div class="wrap">
@@ -98,13 +138,16 @@
     <h2>Let's connect</h2>
     <a class="big" href="mailto:ivanjaemandawe@gmail.com">ivanjaemandawe@gmail.com</a>
     <div class="links">
+      <button class="btn copy" type="button">Copy email</button>
       <a href="https://github.com/IvanJaeMandawee-UCM" target="_blank" rel="noopener">GitHub</a><a href="tel:+639916527520">+63 991 652 7520</a>
     </div>
   </div>
 </section>
 
-<footer>© 2026 Ivan Jae D. Mandawe</footer>
+<footer>© 2026 Ivan Jae D. Mandawe &nbsp;·&nbsp; Built with HTML, CSS &amp; JavaScript</footer>
 
+<div id="toast" role="status">Email copied!</div>
+<button id="top" type="button" aria-label="Back to top">&#8593;</button>
 <button id="tour" type="button">Play auto tour</button>
 
 <script>
@@ -207,21 +250,135 @@ btn.addEventListener('click',()=>{
   requestAnimationFrame(draw);
 })();
 
-// About bands slide from the right to the center as you scroll down
+// About bands fade in (opacity) when scrolled into view
 (function(){
   const band=document.querySelector('.band');
   if(!band||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
-  let tick=false;
-  function update(){
-    tick=false;
-    const top=band.getBoundingClientRect().top,vh=innerHeight;
-    let p=(vh*.95-top)/(vh*.6);p=Math.max(0,Math.min(1,p));
-    p=p*p*(3-2*p);
-    band.style.setProperty('--tx',((1-p)*75).toFixed(2)+'%');
+  band.classList.add('pre');
+  new IntersectionObserver((es,o)=>es.forEach(e=>{
+    if(e.isIntersecting){band.classList.remove('pre');o.unobserve(band)}
+  }),{threshold:.25}).observe(band);
+})();
+
+// photo gallery: category filter, entrance animation, lightbox
+(function(){
+  const wall=document.querySelector('.wall'),shots=[...wall.querySelectorAll('.shot')],
+        fbtns=document.querySelectorAll('.filters button'),
+        lb=document.getElementById('lb'),lbImg=lb.querySelector('img'),lbCap=lb.querySelector('figcaption'),
+        calm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let cur=0,list=shots;
+  function pop(items){items.forEach((s,i)=>{s.classList.remove('pop');void s.offsetWidth;s.style.setProperty('--i',i);if(!calm)s.classList.add('pop')})}
+  fbtns.forEach(b=>b.addEventListener('click',()=>{
+    fbtns.forEach(x=>x.classList.toggle('on',x===b));
+    const f=b.dataset.f;
+    shots.forEach(s=>s.classList.toggle('hide',f!=='all'&&s.dataset.cat!==f));
+    list=shots.filter(s=>!s.classList.contains('hide'));pop(list);
+  }));
+  if(!calm){
+    wall.classList.add('pre');
+    new IntersectionObserver((es,o)=>{if(es[0].isIntersecting){wall.classList.remove('pre');pop(shots);o.disconnect()}},{threshold:.15}).observe(wall);
   }
-  addEventListener('scroll',()=>{if(!tick){tick=true;requestAnimationFrame(update)}},{passive:true});
-  addEventListener('resize',update);
-  update();
+  function open(i){
+    cur=(i+list.length)%list.length;const s=list[cur],im=s.querySelector('img');
+    lbImg.src=im.src;lbImg.alt=im.alt;
+    lbCap.innerHTML='<b>'+s.querySelector('b').textContent+'</b>'+s.querySelector('i').textContent;
+    lb.classList.add('open');
+  }
+  function close(){lb.classList.remove('open')}
+  shots.forEach(s=>s.addEventListener('click',()=>open(list.indexOf(s))));
+  lb.querySelector('.x').onclick=close;
+  lb.querySelector('.pv').onclick=()=>open(cur-1);
+  lb.querySelector('.nx').onclick=()=>open(cur+1);
+  lb.addEventListener('click',e=>{if(e.target===lb)close()});
+  addEventListener('keydown',e=>{
+    if(!lb.classList.contains('open'))return;
+    if(e.key==='Escape')close();
+    if(e.key==='ArrowLeft')open(cur-1);
+    if(e.key==='ArrowRight')open(cur+1);
+  });
+})();
+
+// ===== professional polish: nav, reveal, counters, tilt, cursor, extras =====
+(function(){
+  const calm=matchMedia('(prefers-reduced-motion: reduce)').matches,fine=matchMedia('(pointer:fine)').matches;
+  const nav=document.querySelector('nav'),burger=nav.querySelector('.burger'),top=document.getElementById('top'),line=document.querySelector('.line');
+
+  // nav: shrink on scroll, back-to-top, timeline progress
+  let tk=false;
+  function onScroll(){
+    tk=false;
+    nav.classList.toggle('scrolled',scrollY>30);
+    top.classList.toggle('show',scrollY>700);
+    if(line){const r=line.getBoundingClientRect();line.style.setProperty('--p',Math.max(0,Math.min(1,(innerHeight*.75-r.top)/r.height)))}
+  }
+  addEventListener('scroll',()=>{if(!tk){tk=true;requestAnimationFrame(onScroll)}},{passive:true});onScroll();
+  top.onclick=()=>scrollTo({top:0,behavior:'smooth'});
+  burger.onclick=()=>{const o=nav.classList.toggle('open');burger.setAttribute('aria-expanded',o)};
+  nav.querySelectorAll('ul a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
+
+  // scrollspy
+  const links=[...nav.querySelectorAll('ul a')];
+  const spy=new IntersectionObserver(es=>es.forEach(e=>{
+    if(e.isIntersecting)links.forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id));
+  }),{rootMargin:'-45% 0px -50% 0px'});
+  links.forEach(a=>{const s=document.querySelector(a.getAttribute('href'));if(s)spy.observe(s)});
+
+  // staggered scroll reveal
+  if(!calm){
+    const cnt=new Map();
+    document.querySelectorAll('section h2,.gal-sub,.filters,.skill,.tags,.item,.card,.facts div,.links,.contact .big').forEach(el=>{
+      const n=cnt.get(el.parentNode)||0;cnt.set(el.parentNode,n+1);
+      el.style.setProperty('--d',Math.min(n,6)*90+'ms');el.classList.add('rv');
+    });
+    const rio=new IntersectionObserver((es,o)=>es.forEach(e=>{
+      if(e.isIntersecting){e.target.classList.add('seen');o.unobserve(e.target);
+        setTimeout(()=>e.target.classList.remove('rv','seen'),1300)}
+    }),{threshold:.15});
+    document.querySelectorAll('.rv').forEach(el=>rio.observe(el));
+  }
+
+  // skill percentages count up
+  document.querySelectorAll('.skill').forEach(sk=>{
+    const out=sk.querySelector('.top span:last-child'),to=parseInt(out.textContent);
+    if(calm)return;out.textContent='0%';
+    new IntersectionObserver((es,o)=>{if(es[0].isIntersecting){o.disconnect();
+      const t0=performance.now();(function f(t){const p=Math.min((t-t0)/1400,1);
+        out.textContent=Math.round(to*(1-Math.pow(1-p,3)))+'%';if(p<1)requestAnimationFrame(f)})(t0)}},{threshold:.6}).observe(sk);
+  });
+
+  if(fine&&!calm){
+    // 3D tilt on achievement cards
+    document.querySelectorAll('.card').forEach(c=>{
+      c.addEventListener('pointermove',e=>{const r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;
+        c.style.transform='perspective(700px) rotateX('+(-y*8)+'deg) rotateY('+(x*10)+'deg) translateY(-4px)'});
+      c.addEventListener('pointerleave',()=>c.style.transform='');
+    });
+    // magnetic buttons
+    document.querySelectorAll('.btn').forEach(b=>{
+      b.addEventListener('pointermove',e=>{const r=b.getBoundingClientRect();
+        b.style.translate=((e.clientX-r.left-r.width/2)*.18)+'px '+((e.clientY-r.top-r.height/2)*.3)+'px'});
+      b.addEventListener('pointerleave',()=>b.style.translate='');
+    });
+    // trailing cursor ring
+    const ring=document.createElement('div');ring.className='ring';document.body.appendChild(ring);
+    let rx=0,ry=0,tx=0,ty=0;
+    addEventListener('pointermove',e=>{tx=e.clientX;ty=e.clientY;ring.classList.add('on');
+      ring.classList.toggle('big',!!e.target.closest('a,button,.shot,.card'))},{passive:true});
+    document.addEventListener('pointerleave',()=>ring.classList.remove('on'));
+    (function loop(){rx+=(tx-rx)*.18;ry+=(ty-ry)*.18;ring.style.transform='translate('+rx+'px,'+ry+'px) translate(-50%,-50%)';requestAnimationFrame(loop)})();
+    // portrait parallax
+    const pt=document.querySelector('.portrait');
+    document.querySelector('.hero').addEventListener('pointermove',e=>{
+      pt.style.translate=((e.clientX/innerWidth-.5)*-18)+'px '+((e.clientY/innerHeight-.5)*-18)+'px'},{passive:true});
+  }
+
+  // copy email
+  const toast=document.getElementById('toast');
+  document.querySelector('.copy').addEventListener('click',async()=>{
+    const m='ivanjaemandawe@gmail.com';
+    try{await navigator.clipboard.writeText(m)}catch(e){prompt('Copy this email:',m);return}
+    toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),1800);
+  });
 })();
 </script>
 </body>
