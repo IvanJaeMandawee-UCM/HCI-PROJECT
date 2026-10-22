@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ivan Jae D. Mandawe | Personal Profile</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Syne:wght@600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="bar"></div>
+
+<nav>
+  <b>IJM</b>
+  <ul>
+    <li><a href="#gallery">Photos</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#journey">Journey</a></li>
+    <li><a href="#projects">Achievements</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <button class="burger" type="button" aria-label="Menu" aria-expanded="false">&#9776;</button>
+</nav>
+
+<header class="hero">
+  <canvas id="px" aria-hidden="true"></canvas>
+  <div class="wrap">
+   <div class="hero-text">
+    <h1 class="in">Ivan Jae<span>D. Mandawe</span></h1>
+    <div class="role in"><span id="typed"></span><i class="cur"></i></div>
+    <p class="lead in">Student at the University of Cebu (Main), living in Kalunasan, Cebu City, and proudly from Calubian, Bogo City, Cebu.</p>
+    <div class="btns in">
+      <a class="btn solid" href="#gallery">My photos</a>
+      <a class="btn" href="#projects">Achievements</a>
+      <a class="btn" href="#contact">Contact me</a>
+    </div>
+   </div>
+   <div class="portrait in"><img src="images/portrait.jpg" alt="Ivan Jae D. Mandawe"><span>BSIT</span></div>
+  </div>
+  <a class="cue" href="#gallery" aria-label="Scroll down">Scroll<i></i></a>
+</header>
+
+<div class="marquee" aria-hidden="true"><div class="track"><span>Student</span><span>BSIT</span><span>Programmer</span><span>Gamer</span><span>Cebu City</span><span>University of Cebu</span><span>Student</span><span>BSIT</span><span>Programmer</span><span>Gamer</span><span>Cebu City</span><span>University of Cebu</span></div><div class="track"><span>Student</span><span>BSIT</span><span>Programmer</span><span>Gamer</span><span>Cebu City</span><span>University of Cebu</span><span>Student</span><span>BSIT</span><span>Programmer</span><span>Gamer</span><span>Cebu City</span><span>University of Cebu</span></div></div>
+
+<section class="gallery" id="gallery">
+  <div class="wrap">
+    <h2>My story in photos</h2>
+    <p class="gal-sub">Pick a chapter of my life and tap any photo to see it bigger.</p>
+    <div class="filters" role="group" aria-label="Photo categories">
+      <button type="button" data-f="all" class="on"><span>All<em>7</em></span></button>
+      <button type="button" data-f="elementary"><span>Elementary<em>1</em></span></button>
+      <button type="button" data-f="high"><span>High School<em>2</em></span></button>
+      <button type="button" data-f="senior"><span>Senior High<em>1</em></span></button>
+      <button type="button" data-f="college"><span>College<em>1</em></span></button>
+      <button type="button" data-f="family"><span>Family &amp; Cousins<em>2</em></span></button>
+    </div>
+    <div class="wall">
+      <button class="shot" type="button" data-cat="college"><span class="ph"><img src="images/college.jpg" alt="College" loading="lazy"></span><span class="cap"><b>College</b><i>College</i></span></button>
+      <button class="shot" type="button" data-cat="elementary"><span class="ph"><img src="images/elementary.jpg" alt="Elementary" loading="lazy"></span><span class="cap"><b>Elementary</b><i>Elementary</i></span></button>
+      <button class="shot" type="button" data-cat="high"><span class="ph"><img src="images/high-school-era.jpg" alt="High School Era" loading="lazy"></span><span class="cap"><b>High School Era</b><i>High School</i></span></button>
+      <button class="shot" type="button" data-cat="high"><span class="ph"><img src="images/high-school.jpg" alt="High School" loading="lazy"></span><span class="cap"><b>High School</b><i>High School</i></span></button>
+      <button class="shot" type="button" data-cat="senior"><span class="ph"><img src="images/senior-high.jpg" alt="When I was Senior High School Student" loading="lazy"></span><span class="cap"><b>When I was Senior High School Student</b><i>Senior High</i></span></button>
+      <button class="shot" type="button" data-cat="family"><span class="ph"><img src="images/family-christmas.jpg" alt="Family Christmas Celebration" loading="lazy"></span><span class="cap"><b>Family Christmas Celebration</b><i>Family &amp; Cousins</i></span></button>
+      <button class="shot" type="button" data-cat="family"><span class="ph"><img src="images/pandemic-cousins.jpg" alt="Pandemic day with my cousins" loading="lazy"></span><span class="cap"><b>Pandemic day with my cousins</b><i>Family &amp; Cousins</i></span></button>
+    </div>
+  </div>
+</section>
+
+<div id="lb" role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <button class="x" type="button" aria-label="Close">&times;</button>
+  <button class="pv" type="button" aria-label="Previous">&#8249;</button>
+  <button class="nx" type="button" aria-label="Next">&#8250;</button>
+  <figure><img alt=""><figcaption></figcaption></figure>
+</div>
+
+<section class="about" id="about">
+  <div class="wrap">
+    <h2>About me</h2>
+    <div class="band">
+      <div class="b1" aria-hidden="true"></div>
+      <div class="b2" aria-hidden="true"></div>
+      <div class="b3"><div class="txt">
+        <p>I am Ivan Jae D. Mandawe, a student at the University of Cebu (Main). I currently live in Kalunasan, Cebu City, and my home is in Calubian, Bogo City, Cebu.</p>
+        <p>Outside class, I enjoy programming and playing games like Fallout and State of Decay 2.</p>
+      </div></div>
+    </div>
+    <div class="facts">
+  <div><small>Status</small><strong>Student</strong></div>
+  <div><small>University</small><strong>University of Cebu (Main)</strong></div>
+  <div><small>Current address</small><strong>Kalunasan, Cebu City</strong></div>
+  <div><small>Main address</small><strong>Calubian, Bogo City, Cebu</strong></div>
+  <div><small>Gender</small><strong>Male</strong></div>
+  <div><small>Height</small><strong>5.5 ft (about 168 cm)</strong></div>
+  <div><small>Hobbies</small><strong>Programming, playing games</strong></div>
+  <div><small>Favorite games</small><strong>Fallout, State of Decay 2</strong></div>
+</div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <h2>Skills</h2>
+    <div class="skill"><div class="top"><span>Gaming</span><span>90%</span></div><div class="track"><div class="fill" data-w="90"></div></div></div>
+    <div class="skill"><div class="top"><span>Problem solving</span><span>80%</span></div><div class="track"><div class="fill" data-w="80"></div></div></div>
+    <div class="skill"><div class="top"><span>Programming</span><span>65%</span></div><div class="track"><div class="fill" data-w="65"></div></div></div>
+    <div class="skill"><div class="top"><span>Teamwork</span><span>85%</span></div><div class="track"><div class="fill" data-w="85"></div></div></div>
+    <div class="tags"><span>Fallout</span><span>State of Decay 2</span><span>Programming</span></div>
+  </div>
+</section>
+
+<section class="exp" id="journey">
+  <div class="wrap">
+    <h2>My journey</h2>
+    <div class="line">
+      <div class="item"><time>2025 to now</time><h3>University of Cebu (Main)</h3><p>This University is the last hope of my journey through my dreams.</p></div>
+      <div class="item"><time>2022 to 2024</time><h3>Cebu Roosevelt Memorial Colleges (CRMC)</h3><p>This school enlightened me towards the brightest, even back then I felt hellish days there.</p></div>
+      <div class="item"><time>2021</time><h3>My 2021 milestone</h3><p>It gave me strength to continue in the climax of the crisis when COVID ended. I gave all my knowledge in this year, and I will make it perfect even if it is hard.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <h2>Achievements</h2>
+    <div class="projects">
+      <article class="card big"><h3>Worth Achievements</h3><p>I've been awarded in SHS Grade 12 as "Best Research Presenter". Those hellish days have paid off through hard work.</p></article>
+      <article class="card"><h3>I made it here</h3><p>I made it here in the University of Cebu (Main), and I am very thankful that it gave me the chance to be on this path.</p></article>
+      <article class="card"><h3>Starting up</h3><p>I've already made up my mind that I will choose Bachelor of Science in Information Technology (BSIT).</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <h2>Let's connect</h2>
+    <a class="big" href="mailto:ivanjaemandawe@gmail.com">ivanjaemandawe@gmail.com</a>
+    <div class="links">
+      <button class="btn copy" type="button">Copy email</button>
+      <a href="https://github.com/IvanJaeMandawee-UCM" target="_blank" rel="noopener">GitHub</a><a href="tel:+639916527520">+63 991 652 7520</a>
+    </div>
+  </div>
+</section>
+
+<footer>© 2026 Ivan Jae D. Mandawe &nbsp;·&nbsp; Built with HTML, CSS &amp; JavaScript</footer>
+
+<div id="toast" role="status">Email copied!</div>
+<button id="top" type="button" aria-label="Back to top">&#8593;</button>
+<button id="tour" type="button">Play auto tour</button>
+
+<script>
+// typing effect for the role line (edit the list)
+const roles=["Student","Programmer","Gamer"];
+const typed=document.getElementById('typed');
+let r=0,c=0,del=false;
+(function type(){
+  const w=roles[r];
+  typed.textContent=w.slice(0,c);
+  if(!del&&c<w.length){c++;setTimeout(type,90)}
+  else if(!del){del=true;setTimeout(type,1200)}
+  else if(c>0){c--;setTimeout(type,45)}
+  else{del=false;r=(r+1)%roles.length;setTimeout(type,300)}
+})();
+
+// scroll progress bar
+const bar=document.getElementById('bar');
+addEventListener('scroll',()=>{
+  const h=document.documentElement.scrollHeight-innerHeight;
+  bar.style.width=(scrollY/h*100)+'%';
+},{passive:true});
+
+// skill bars fill when scrolled into view
+const io=new IntersectionObserver(es=>es.forEach(e=>{
+  if(e.isIntersecting){e.target.style.width=e.target.dataset.w+'%';io.unobserve(e.target)}
+}),{threshold:.4});
+document.querySelectorAll('.fill').forEach(f=>io.observe(f));
+
+// optional auto tour: smooth scroll top to bottom in about 45 seconds
+const btn=document.getElementById('tour');
+let raf=null,start,from,dist;
+const DURATION=45000;
+function stop(){cancelAnimationFrame(raf);raf=null;btn.textContent='Play auto tour'}
+function step(t){
+  if(!start)start=t;
+  const p=Math.min((t-start)/DURATION,1);
+  scrollTo(0,from+dist*p);
+  if(p<1&&raf)raf=requestAnimationFrame(step);else stop();
+}
+btn.addEventListener('click',()=>{
+  if(raf){stop();return}
+  document.documentElement.style.scrollBehavior='auto';
+  from=scrollY;dist=document.documentElement.scrollHeight-innerHeight-from;start=null;
+  btn.textContent='Pause tour';
+  raf=requestAnimationFrame(step);
+});
+['wheel','touchstart','keydown'].forEach(ev=>addEventListener(ev,()=>{if(raf)stop()},{passive:true}));
+
+// pixelated matte-yellow background that reacts to the cursor
+(function(){
+  const hero=document.querySelector('.hero'),cv=document.getElementById('px'),ctx=cv.getContext('2d');
+  const S=16,still=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let W,H,cols,rows,heat,mx=-999,my=-999,px=-999,py=-999,live=true;
+  function size(){
+    const r=hero.getBoundingClientRect();W=cv.width=r.width;H=cv.height=r.height;
+    cols=Math.ceil(W/S);rows=Math.ceil(H/S);heat=new Float32Array(cols*rows);
+  }
+  function inject(x,y,k){
+    const cx=x/S,cy=y/S,R=6;
+    for(let j=Math.max(0,Math.floor(cy-R));j<Math.min(rows,cy+R);j++)
+      for(let i=Math.max(0,Math.floor(cx-R));i<Math.min(cols,cx+R);i++){
+        const d=Math.hypot(i+.5-cx,j+.5-cy);
+        if(d<R)heat[j*cols+i]=Math.min(1,heat[j*cols+i]+k*(1-d/R));
+      }
+  }
+  hero.addEventListener('pointermove',e=>{
+    if(still)return;
+    const r=hero.getBoundingClientRect();mx=e.clientX-r.left;my=e.clientY-r.top;
+    const sp=Math.min(1,Math.hypot(mx-px,my-py)/40);
+    if(px>-900){ // fill the gap between events so the trail is continuous
+      const n=Math.ceil(Math.hypot(mx-px,my-py)/S)||1;
+      for(let k=1;k<=n;k++)inject(px+(mx-px)*k/n,py+(my-py)*k/n,.12+.18*sp);
+    }
+    px=mx;py=my;
+  },{passive:true});
+  hero.addEventListener('pointerleave',()=>{px=py=-999});
+  new IntersectionObserver(es=>{live=es[0].isIntersecting;if(live&&!still)requestAnimationFrame(draw)}).observe(hero);
+  addEventListener('resize',size);
+
+  function draw(t){
+    if(!live)return;
+    ctx.clearRect(0,0,W,H);
+    for(let j=0;j<rows;j++)for(let i=0;i<cols;i++){
+      const x=i*S+S/2,y=j*S+S/2;let a=0;
+      for(let b=0;b<3;b++){ // slow drifting blobs
+        const bx=W*(.5+.38*Math.sin(t*.00018+b*2.1)),by=H*(.5+.3*Math.cos(t*.00023+b*1.7)),
+              d2=((x-bx)**2+(y-by)**2),sg=Math.min(W,H)*.28;
+        a+=.2*Math.exp(-d2/(2*sg*sg));
+      }
+      const idx=j*cols+i;
+      a+=heat[idx]*.55+Math.sin(i*12.9+j*78.2+t*.0016)*.025;
+      a=Math.round(Math.max(0,Math.min(.5,a))*10)/10;
+      if(a>0.04){ctx.fillStyle='rgba(214,170,40,'+a+')';ctx.fillRect(i*S,j*S,S-1,S-1)}
+      heat[idx]*=.955;
+    }
+    if(!still)requestAnimationFrame(draw);
+  }
+  size();
+  requestAnimationFrame(draw);
+})();
+
+// About bands fade in (opacity) when scrolled into view
+(function(){
+  const band=document.querySelector('.band');
+  if(!band||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  band.classList.add('pre');
+  new IntersectionObserver((es,o)=>es.forEach(e=>{
+    if(e.isIntersecting){band.classList.remove('pre');o.unobserve(band)}
+  }),{threshold:.25}).observe(band);
+})();
+
+// photo gallery: category filter, entrance animation, lightbox
+(function(){
+  const wall=document.querySelector('.wall'),shots=[...wall.querySelectorAll('.shot')],
+        fbtns=document.querySelectorAll('.filters button'),
+        lb=document.getElementById('lb'),lbImg=lb.querySelector('img'),lbCap=lb.querySelector('figcaption'),
+        calm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let cur=0,list=shots;
+  function pop(items){items.forEach((s,i)=>{s.classList.remove('pop');void s.offsetWidth;s.style.setProperty('--i',i);if(!calm)s.classList.add('pop')})}
+  fbtns.forEach(b=>b.addEventListener('click',()=>{
+    fbtns.forEach(x=>x.classList.toggle('on',x===b));
+    const f=b.dataset.f;
+    shots.forEach(s=>s.classList.toggle('hide',f!=='all'&&s.dataset.cat!==f));
+    list=shots.filter(s=>!s.classList.contains('hide'));pop(list);
+  }));
+  if(!calm){
+    wall.classList.add('pre');
+    new IntersectionObserver((es,o)=>{if(es[0].isIntersecting){wall.classList.remove('pre');pop(shots);o.disconnect()}},{threshold:.15}).observe(wall);
+  }
+  function open(i){
+    cur=(i+list.length)%list.length;const s=list[cur],im=s.querySelector('img');
+    lbImg.src=im.src;lbImg.alt=im.alt;
+    lbCap.innerHTML='<b>'+s.querySelector('b').textContent+'</b>'+s.querySelector('i').textContent;
+    lb.classList.add('open');
+  }
+  function close(){lb.classList.remove('open')}
+  shots.forEach(s=>s.addEventListener('click',()=>open(list.indexOf(s))));
+  lb.querySelector('.x').onclick=close;
+  lb.querySelector('.pv').onclick=()=>open(cur-1);
+  lb.querySelector('.nx').onclick=()=>open(cur+1);
+  lb.addEventListener('click',e=>{if(e.target===lb)close()});
+  addEventListener('keydown',e=>{
+    if(!lb.classList.contains('open'))return;
+    if(e.key==='Escape')close();
+    if(e.key==='ArrowLeft')open(cur-1);
+    if(e.key==='ArrowRight')open(cur+1);
+  });
+})();
+
+// ===== professional polish: nav, reveal, counters, tilt, cursor, extras =====
+(function(){
+  const calm=matchMedia('(prefers-reduced-motion: reduce)').matches,fine=matchMedia('(pointer:fine)').matches;
+  const nav=document.querySelector('nav'),burger=nav.querySelector('.burger'),top=document.getElementById('top'),line=document.querySelector('.line');
+
+  // nav: shrink on scroll, back-to-top, timeline progress
+  let tk=false;
+  function onScroll(){
+    tk=false;
+    nav.classList.toggle('scrolled',scrollY>30);
+    top.classList.toggle('show',scrollY>700);
+    if(line){const r=line.getBoundingClientRect();line.style.setProperty('--p',Math.max(0,Math.min(1,(innerHeight*.75-r.top)/r.height)))}
+  }
+  addEventListener('scroll',()=>{if(!tk){tk=true;requestAnimationFrame(onScroll)}},{passive:true});onScroll();
+  top.onclick=()=>scrollTo({top:0,behavior:'smooth'});
+  burger.onclick=()=>{const o=nav.classList.toggle('open');burger.setAttribute('aria-expanded',o)};
+  nav.querySelectorAll('ul a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
+
+  // scrollspy
+  const links=[...nav.querySelectorAll('ul a')];
+  const spy=new IntersectionObserver(es=>es.forEach(e=>{
+    if(e.isIntersecting)links.forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id));
+  }),{rootMargin:'-45% 0px -50% 0px'});
+  links.forEach(a=>{const s=document.querySelector(a.getAttribute('href'));if(s)spy.observe(s)});
+
+  // staggered scroll reveal
+  if(!calm){
+    const cnt=new Map();
+    document.querySelectorAll('section h2,.gal-sub,.filters,.skill,.tags,.item,.card,.facts div,.links,.contact .big').forEach(el=>{
+      const n=cnt.get(el.parentNode)||0;cnt.set(el.parentNode,n+1);
+      el.style.setProperty('--d',Math.min(n,6)*90+'ms');el.classList.add('rv');
+    });
+    const rio=new IntersectionObserver((es,o)=>es.forEach(e=>{
+      if(e.isIntersecting){e.target.classList.add('seen');o.unobserve(e.target);
+        setTimeout(()=>e.target.classList.remove('rv','seen'),1300)}
+    }),{threshold:.15});
+    document.querySelectorAll('.rv').forEach(el=>rio.observe(el));
+  }
+
+  // skill percentages count up
+  document.querySelectorAll('.skill').forEach(sk=>{
+    const out=sk.querySelector('.top span:last-child'),to=parseInt(out.textContent);
+    if(calm)return;out.textContent='0%';
+    new IntersectionObserver((es,o)=>{if(es[0].isIntersecting){o.disconnect();
+      const t0=performance.now();(function f(t){const p=Math.min((t-t0)/1400,1);
+        out.textContent=Math.round(to*(1-Math.pow(1-p,3)))+'%';if(p<1)requestAnimationFrame(f)})(t0)}},{threshold:.6}).observe(sk);
+  });
+
+  if(fine&&!calm){
+    // 3D tilt on achievement cards
+    document.querySelectorAll('.card').forEach(c=>{
+      c.addEventListener('pointermove',e=>{const r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;
+        c.style.transform='perspective(700px) rotateX('+(-y*8)+'deg) rotateY('+(x*10)+'deg) translateY(-4px)'});
+      c.addEventListener('pointerleave',()=>c.style.transform='');
+    });
+    // magnetic buttons
+    document.querySelectorAll('.btn').forEach(b=>{
+      b.addEventListener('pointermove',e=>{const r=b.getBoundingClientRect();
+        b.style.translate=((e.clientX-r.left-r.width/2)*.18)+'px '+((e.clientY-r.top-r.height/2)*.3)+'px'});
+      b.addEventListener('pointerleave',()=>b.style.translate='');
+    });
+    // trailing cursor ring
+    const ring=document.createElement('div');ring.className='ring';document.body.appendChild(ring);
+    let rx=0,ry=0,tx=0,ty=0;
+    addEventListener('pointermove',e=>{tx=e.clientX;ty=e.clientY;ring.classList.add('on');
+      ring.classList.toggle('big',!!e.target.closest('a,button,.shot,.card'))},{passive:true});
+    document.addEventListener('pointerleave',()=>ring.classList.remove('on'));
+    (function loop(){rx+=(tx-rx)*.18;ry+=(ty-ry)*.18;ring.style.transform='translate('+rx+'px,'+ry+'px) translate(-50%,-50%)';requestAnimationFrame(loop)})();
+    // portrait parallax
+    const pt=document.querySelector('.portrait');
+    document.querySelector('.hero').addEventListener('pointermove',e=>{
+      pt.style.translate=((e.clientX/innerWidth-.5)*-18)+'px '+((e.clientY/innerHeight-.5)*-18)+'px'},{passive:true});
+  }
+
+  // copy email
+  const toast=document.getElementById('toast');
+  document.querySelector('.copy').addEventListener('click',async()=>{
+    const m='ivanjaemandawe@gmail.com';
+    try{await navigator.clipboard.writeText(m)}catch(e){prompt('Copy this email:',m);return}
+    toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),1800);
+  });
+})();
+</script>
+</body>
+</html>
