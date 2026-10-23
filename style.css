@@ -337,3 +337,10 @@ footer{border-top:1px solid var(--graphite)}
 
 /* name pill + big tagline headline */
 .tag{font-size:clamp(1.05rem,2.4vw,1.45rem)}
+.hero h1 b{color:var(--gold);font-weight:inherit;display:inline-block;animation:glow 3.2s ease-in-out infinite;animation-delay:calc(var(--k)*.45s)}
+@media(prefers-reduced-motion:reduce){.hero h1 b{animation:none}}
+
+/* clean headline: solid gold "Where" (no gradient clip), no font ligatures/alternates */
+.hero .hero-text h1.in{background:none;-webkit-background-clip:border-box;background-clip:border-box;color:var(--gold);text-shadow:none;
+  font-variant-ligatures:none;font-feature-settings:"calt" 0,"liga" 0,"dlig" 0;font-synthesis:none;
+  animation:rise .8s cubic-bezier(.2,.7,.2,1) .35s forwards}
