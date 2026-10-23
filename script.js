@@ -1,5 +1,5 @@
 
-// typing effect for the role line (edit the list)
+
 const roles=["Student","Programmer","Gamer"];
 const typed=document.getElementById('typed');
 let r=0,c=0,del=false;
