@@ -11,7 +11,7 @@ let r=0,c=0,del=false;
   else if(c>0){c--;setTimeout(type,45)}
   else{del=false;r=(r+1)%roles.length;setTimeout(type,300)}
 })();
-
+//this newcomment is for testing the git hub
 // scroll progress bar
 const bar=document.getElementById('bar');
 addEventListener('scroll',()=>{
